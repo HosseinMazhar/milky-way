@@ -1,0 +1,90 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#space
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/HD-wallpaper-black-stars-black-aesthetic.jpg);
+    background-repeat: repeat;
+    z-index: 1;
+    animation: space-moving 50s;
+}
+
+
+
+#galaxy{
+    animation: arriving-animate 50s;
+    z-index: 2;
+}
+
+
+#milky-way
+{
+    width: 80vw;
+    aspect-ratio: 1/1;
+    background-image: url(images/Milky-Way-Galaxy-Artists-Conception.jpg);
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    transform: rotateX(-60deg) rotateY(-15deg);
+    animation: milky-animate 80s linear infinite;
+    z-index: 3;
+}
+
+
+@keyframes milky-animate
+{
+    0%{
+        transform: rotateX(-60deg) rotateY(-15deg) rotate(0deg);
+    }
+    100%{
+        transform: rotateX(-60deg) rotateY(-15deg) rotate(360deg);
+    }
+
+}
+
+@keyframes arriving-animate
+{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes space-moving {
+    0%
+    {
+        scale: 1;
+    }
+    100%
+    {
+        scale: 2;
+    }
+    
+}
+
+@keyframes big-ones-moving {
+    0%
+    {
+        visibility: visible;
+        scale: 0.1;
+    }
+    100%
+    {
+        scale: 2.2;
+        visibility: hidden;
+    }
+    
+}
